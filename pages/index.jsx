@@ -1,51 +1,40 @@
 import Link from 'next/link';
 import Head from 'next/head'
 import Image from 'next/image'
-import dynamic from "next/dynamic"
 import { useState } from 'react';
 
+import MainView from '../views/MainView'
 import AboutView from '../views/AboutView'
 import ContactView from '../views/ContactView'
-import TitleView001 from './001_Book/TitleView'
-import TitleView002 from './002_Book/TitleView'
-import TitleView003 from './003_Book/TitleView'
+import DynamicView001 from './001_Project/TitleView'
+import DynamicView002 from './002_Project/TitleView'
+import DynamicView003 from './003_Project/TitleView'
 
-const CRYPTOBOOKZ = () => {
-  const [viewIDX, setViewIDX] = useState('AboutView');//('TitleView');
-  const [bookIDX, setBookIDX] = useState(0);
+const portfolio_app = () => {
+  const [viewIDX, setViewIDX] = useState('MainView');
+  const [projectIDX, setProjectIDX] = useState(0); 
 
-  const connectWallet = () => {
-    //TODO: window.ethereum
-  };  
-
-  const loadBooks_TitleMain = () => {
-    //TODO: show scrollable grid of bookz.
-  };  
-
-  const loadBook_TitleLast = () => { 
-    if(bookIDX<1){ setBookIDX(bookList.length-1)} //loop around index
-    else { setBookIDX(bookIDX - 1); }
+  const loadProject_TitleLast = () => { 
+    if(projectIDX<1){ setProjectIDX(viewList.length-1)} //loop around index
+    else { setProjectIDX(projectIDX - 1); }
   };
 
-  const loadBook_TitleNext = () => {
-    if(bookIDX >= bookList.length-1){ setBookIDX(0); setViewIDX("TitleView"); } //loop around index        
-    else { setBookIDX(bookIDX + 1); setViewIDX("TitleView"); }
+  const loadProject_TitleNext = () => {
+    if(projectIDX >= viewList.length-1){ setProjectIDX(0); setViewIDX("DynamicView"); } //loop around index        
+    else { setProjectIDX(projectIDX + 1); setViewIDX("DynamicView"); }
   };
 
-  const renderbookList = (pageNUM) => {
+  const renderviewList = (pageNUM) => {
     let page = null;
-    if (bookIDX===0){ return bookList[0];
-    } else if (bookIDX===1){ return bookList[1];
-    } else if (bookIDX===2){ return bookList[2];
-    } else if (bookIDX===3){ return bookList[3];
-    } else { return bookList[4];
+    if (projectIDX===0){ return viewList[0];
+    } else if (projectIDX===1){ return viewList[1];
+    } else if (projectIDX===2){ return viewList[2];
+    } else if (projectIDX===3){ return viewList[3];
+    } else { return viewList[4];
     }  
   };
 
-  const textToCopy = "https://linktr.ee/spazefalcon";
-  const CC = dynamic(() => import("../components/copyClipboard").then(mod => mod.CopyClipboard), { ssr: false })
-
-  let bookList = [<TitleView001/>,<TitleView002/>,<TitleView003/>,<AboutView/>,<ContactView/>];  
+  let viewList = [<MainView/>,<DynamicView001/>,<DynamicView002/>,<DynamicView003/>,<AboutView/>,<ContactView/>];  
 
   return (
     <div className="flex min-h-screen flex-col bg-black text-slate-600 items-center justify-center">
@@ -59,11 +48,8 @@ const CRYPTOBOOKZ = () => {
             onClick={ () => { loadBooks_TitleMain(); } }
             ><Link href="/">MAIN</ Link></button> */}
 
-          <maintitle className="flex text-md md:text-2xl" style={{'font-family':'fantasy'}}>
-            SPAZEFALCON PORTFIOLIO
-            <div className="ml-2 hover:shadow-indigo-500 hover:shadow-blue-100">{/*icon*/}
-              <CC content={textToCopy} />
-            </div>
+          <maintitle className="flex" style={{'font-family':'fantasy', 'font-size':'1.8em'}}>
+            SPAZEFALCON PORTFOLIO
           </maintitle>
 
           {/* <button disabled className={"disabled:bg-slate-500 disabled:hover:text-black text-xs rounded-md text-blue bg-blue-400 px-4 py-2 w-1/5 hover:bg-blue-400 hover:text-white hover:shadow-blue-500 hover:border-indigo-500/50 text-slate-700 active:text-indigo-700 shadow-lg shadow-cyan-500/50 active:shadow-indigo-500"} 
@@ -72,13 +58,14 @@ const CRYPTOBOOKZ = () => {
           </button> */}
     
       </header> 
-      {/* custom html frames */}
-      <booklistframe className="flex w-full flex-1 flex-col items-center justify-center px-2 md:px-20 text-center">
+      {/* custom html frames - advanced */}
+      <viewlistframe className="flex w-full flex-1 flex-col items-center justify-center px-2 md:px-20 text-center">
       {         
         (() => { //DYNAMIC-VIEW-DISPLAY (design~innovation)
-          if (viewIDX === "TitleView") {
-            return renderbookList();
-            // return  <TitleView001 />
+          if (viewIDX === "DynamicView") {
+            return renderviewList();
+          } else if (viewIDX === "MainView") {
+            return <MainView /> ;
           } else if (viewIDX === "AboutView") {
             return <AboutView /> ;
           } else if (viewIDX === "ContactView") {
@@ -86,30 +73,40 @@ const CRYPTOBOOKZ = () => {
           }
         })()
       }
-      </booklistframe>
-      <footer className="flex h-12 w-full px-2 md:px-10 justify-between items-center justify-center border-t-2 border-t-indigo-500/50">
-        <button className={""} 
+      </viewlistframe>
+      <footer className="flex h-12 w-full mt-10 px-2 md:px-10 justify-between items-center justify-center border-t-2 border-t-indigo-500/50">
+
+      <Link href="/PDF_Resume_JS/PDFView">
+        Resume
+      </Link>
+
+        {/* <button className={""} 
             onClick={ ()=>{ setViewIDX("AboutView");}
-        }>about</button> 
-        <booknav className="flex w-auto justify-between justify-center items-center">
+        }>about</button>  */}
+        <projectnav className="flex w-auto justify-between justify-center items-center">
           <button className={"disabled:bg-slate-500 rounded-md text-blue bg-blue-400 px-4 py-1 my-1 hover:bg-blue-400 hover:text-white hover:shadow-blue-500 hover:border-indigo-500/50 text-slate-700 active:text-indigo-700 shadow-lg shadow-cyan-500/50 active:shadow-indigo-500"} 
-            onClick={ ()=>{ loadBook_TitleLast() }
+            onClick={ ()=>{ loadProject_TitleLast() }
           }>LAST</button>
 
-          <booknum className="mx-1 sm:mx-4"> {bookIDX + 1} of {bookList.length}</booknum>
+          <projectnum className="mx-1 sm:mx-4"> {projectIDX + 1} of {viewList.length}</projectnum>
 
           <button className={"disabled:bg-slate-500 rounded-md text-blue bg-blue-400 px-4 py-1 my-1 hover:bg-blue-400 hover:text-white hover:shadow-blue-500 hover:border-indigo-500/50 text-slate-700 active:text-indigo-700 shadow-lg shadow-cyan-500/50 active:shadow-indigo-500"} 
-            onClick={ ()=>{ loadBook_TitleNext() }
+            onClick={ ()=>{ loadProject_TitleNext() }
           }>NEXT</button>
-        </booknav>
+        </projectnav>
 
-        <button className={""} 
+        {/* <button className={""} 
             onClick={ ()=>{ setViewIDX("ContactView");} 
-        }>contact</button> 
+        }>contact</button>  */}
+
+      <Link href="/PDF_Portfolio/PDFView">
+        Portfolio
+      </Link>
+
       </footer>
       {/* <style jsx global>{` `}</style> */}
     </div>
   )
 }
 
-export default CRYPTOBOOKZ
+export default portfolio_app

@@ -17,10 +17,10 @@ module.exports = {
         'lg': {'min': '1023px'},
         // => @media (max-width: 1023px) { ... }
   
-        'md': {'min': '767px'},
+        'md': {'min': '700px'},
         // => @media (max-width: 767px) { ... }
-  
-        'sm': {'min': '639px'},
+       'sm': {'min': '550px'},
+        'xsm': {'min': '350px'},
         // => @media (max-width: 639px) { ... }
       }
     }

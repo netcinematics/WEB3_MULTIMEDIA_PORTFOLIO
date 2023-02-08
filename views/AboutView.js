@@ -1,4 +1,6 @@
-export default function IntroView() {
+import Link from 'next/link';
+
+export default function AboutView() {
 
 return (
     <main className="flex w-full flex-1 flex-col items-center justify-center text-center">
@@ -34,14 +36,15 @@ return (
         </p>
     </a>
 
-    <a href="https://github.com/vercel/next.js/tree/canary/examples"
+    {/* <a href="https://github.com/vercel/next.js/tree/canary/examples"
         className="mt-6 w-96 rounded-xl border border-b-2 border-blue-400 hover:border-indigo-500/50 p-6 text-left hover:text-blue-600 focus:text-blue-600"
-    >
+    > */}
+    <Link href="/Resume_JS/PDFView"  className="mt-6 w-96 rounded-xl border border-b-2 border-blue-400 hover:border-indigo-500/50 p-6 text-left hover:text-blue-600 focus:text-blue-600">
         <h3 className="text-2xl font-bold">Resume &rarr;</h3>
         <p className="mt-4 text-xl">
-        Download a PDF resume and see a comprehensive scrollable portfolio.
+        PDF resume of high-level experiences and technical skills.
         </p>
-    </a>
+    </Link>
 
     <a href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
         className="mt-6 w-96 rounded-xl border border-b-2 border-blue-400 hover:border-indigo-500/50 p-6 text-left hover:text-blue-600 focus:text-blue-600"
