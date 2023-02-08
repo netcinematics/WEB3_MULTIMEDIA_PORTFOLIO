@@ -43,15 +43,16 @@ const portfolio_app = () => {
         <link rel="icon" href="/icon1.ico" />
       </Head>
 
-      <header className="flex w-full items-center justify-center sm:items-center h-20 gap-x-2 px-4 border-b-2 border-b-indigo-500/50  ">{/*BUTTON-FRAME*/}
+      <header style={{'box-shadow': '0px 3px 20px 1px blue', 'margin-bottom': '20px'}} className="flex w-full items-center justify-center sm:items-center h-20 gap-x-2 px-4 border-b-2 border-b-indigo-500/50  ">{/*BUTTON-FRAME*/}
           {/* <button disabled className={"disabled:bg-slate-500 disabled:hover:text-black rounded-md text-blue bg-blue-400 px-4 py-2 w-1/5 hover:bg-blue-400 hover:text-white hover:shadow-blue-500 hover:border-indigo-500/50 text-slate-700 active:text-indigo-700 shadow-lg shadow-cyan-500/50 active:shadow-indigo-500"} 
             onClick={ () => { loadBooks_TitleMain(); } }
             ><Link href="/">MAIN</ Link></button> */}
-
-          <maintitle className="flex" style={{'font-family':'fantasy', 'font-size':'1.8em'}}>
-            SPAZEFALCON PORTFOLIO
-          </maintitle>
-
+          {/* <Link href="/"> */}
+            <button className="flex" style={{'font-family':'fantasy', 'font-size':'1.8em', 'textShadow':'0px 3px 20px purple'}}
+              onClick={ ()=>{ setProjectIDX(0); setViewIDX("MainView"); }}>
+              SPAZEFALCON PORTFOLIO
+            </button>
+          {/* </ Link> */}
           {/* <button disabled className={"disabled:bg-slate-500 disabled:hover:text-black text-xs rounded-md text-blue bg-blue-400 px-4 py-2 w-1/5 hover:bg-blue-400 hover:text-white hover:shadow-blue-500 hover:border-indigo-500/50 text-slate-700 active:text-indigo-700 shadow-lg shadow-cyan-500/50 active:shadow-indigo-500"} 
               onClick={ ()=>{ connectWallet() }
           }>CONNECT WALLET
@@ -74,7 +75,7 @@ const portfolio_app = () => {
         })()
       }
       </viewlistframe>
-      <footer className="flex h-12 w-full mt-10 px-2 md:px-10 justify-between items-center justify-center border-t-2 border-t-indigo-500/50">
+      <footer className="flex h-15 py-3 w-full mt-5 px-2 md:px-10 justify-between items-center justify-center border-t-2 border-t-indigo-500/50">
 
       <Link href="/PDF_Resume_JS/PDFView">
         Resume
@@ -104,7 +105,24 @@ const portfolio_app = () => {
       </Link>
 
       </footer>
-      {/* <style jsx global>{` `}</style> */}
+      <style jsx global>{`
+      main { 
+        border-radius: 13px;
+        background-image: url('img/carbon_fibre1.png');
+        
+      }
+
+      header { 
+        border-radius: 13px;
+        background: url(img/circle-blues.png) no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+
+
+      `}</style>
     </div>
   )
 }

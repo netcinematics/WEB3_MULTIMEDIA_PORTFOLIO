@@ -13,12 +13,17 @@ export default function PDFView() {
           <Link className={"px-4 w-1/5 h-8"} href="/">
             <button className={"w-full h-full disabled:bg-slate-500 text-sm rounded-md text-blue bg-blue-400 hover:bg-blue-400 hover:text-white hover:shadow-blue-500 hover:border-indigo-500/50 text-slate-700 active:text-indigo-700 shadow-lg shadow-cyan-500/50 active:shadow-indigo-500"}>
               MAIN</button></ Link>
-            <booktitle className="flex"> 
+            <pagetitle className="flex" style={{'font-family':'fantasy','font-size':'1.5em', 'text-shadow':'4px 4px 3px purple'}}> 
               PDF RESUME
-          </booktitle>
-          <button disabled className={"disabled:bg-slate-500 disabled:hover:text-black text-xs rounded-md text-blue bg-blue-400 px-4 py-2 w-1/5 hover:bg-blue-400 hover:text-white hover:shadow-blue-500 hover:border-indigo-500/50 text-slate-700 active:text-indigo-700 shadow-lg shadow-cyan-500/50 active:shadow-indigo-500"} 
-              onClick={ ()=>{ connectWallet() } // TODO
-          }>WALLET</button>
+             </pagetitle>
+          {/* <button disabled className={"disabled:bg-slate-500 disabled:hover:text-black text-xs rounded-md text-blue bg-blue-400 px-4 py-2 w-1/5 hover:bg-blue-400 hover:text-white hover:shadow-blue-500 hover:border-indigo-500/50 text-slate-700 active:text-indigo-700 shadow-lg shadow-cyan-500/50 active:shadow-indigo-500"} 
+              onClick={ ()=>{ connectWallet() } 
+            }>WALLET</button> */}
+
+          <Link className={"px-4 w-1/5 h-8"} href="/PDF_Portfolio/PDFView">
+          <button className={"w-full h-full disabled:bg-slate-500 text-sm rounded-md text-blue bg-blue-400 hover:bg-blue-400 hover:text-white hover:shadow-blue-500 hover:border-indigo-500/50 text-slate-700 active:text-indigo-700 shadow-lg shadow-cyan-500/50 active:shadow-indigo-500"}>
+            PORTFOLIO</button>
+          </Link>
         </header> 
         <featureframe className="flex w-full flex-1 flex-col items-center justify-center self-stretch items-stretch px-2 md:px-2 pt-6 pb-12 text-center  overflow-auto">
             <ResumeView />
