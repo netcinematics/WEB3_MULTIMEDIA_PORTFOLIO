@@ -61,7 +61,5 @@ export default function BookView() {
 BookView.getInitialProps = async (ctx) => { // FRONT-LOAD static CONTENT.
   const data = "boooook"; //await User.findOne(ctx.query.id)
   console.log('init book1')
-  return {     // return props
-      data
-  }
+  return { data }
 }
