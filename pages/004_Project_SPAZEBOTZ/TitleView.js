@@ -14,8 +14,12 @@ export default function TitleView() {
 return (
     
  <main className="flex w-full flex-1 flex-col items-center justify-center text-center">
-    <Link href="/004_Project_SPAZEBOTZ/PageView">
+    <Link href="/004_Project_SPAZEBOTZ/PageView" className="flex items-center justify-center text-center">
+        {showMore ?
+        <Image src={TitleIMG} alt="Title Cover" className="rounded-xl shadow-lg hover:shadow-blue-400 shadow-cyan-500 active:shadow-indigo-500" alt="" width={600} height={600} style={{width:'70%'}} />
+        :
         <Image src={TitleIMG} alt="Title Cover" className="rounded-xl shadow-lg hover:shadow-blue-400 shadow-cyan-500 active:shadow-indigo-500" alt="" width={600} height={600} />
+        }
     </Link>
     <p className="mt-6 text-2md">Originz in SpazeBotCity {' '}
         <code className="rounded-md p-3 font-mono  text-1md">2020-{new Date().getFullYear()} &copy;  
@@ -23,9 +27,9 @@ return (
         {/* <section><span>&#9650; &#9660;</span></section> */}
 
         <button onClick={handleMoreClick}>
-           {showMore ? <div>hide &#9660;</div> : <div>info &#9650;</div>}
+           {showMore ? <div>hide &#9650;</div> : <div>info &#9660;</div>}
         </button>
-           {showMore && <p>
+           {showMore && <p style={{margin:'1em 4em'}}>
            
            CRYPTOBOOKZ - is a design pattern of NFTs, minted on Polygon MainNet, curated as pages in a book.
 

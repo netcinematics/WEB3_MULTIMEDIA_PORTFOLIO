@@ -4,8 +4,8 @@ import Image from 'next/image'
 import Link from 'next/link';
 
 export default function BookView() { 
-  const [NFTs, setNFTs] = useState([]);
   // const [nextBatchKey,setBatchKey] = useState('');
+  const [NFTs, setNFTs] = useState([]);
 
   useEffect(() => { //Automatically load the book data.
     fetchPolygonSpazefalcon();   
@@ -32,12 +32,12 @@ export default function BookView() {
 
   return (
     <div className="flex flex-col h-screen overflow-hidden justify-between bg-black text-blue-400">
-      <header className="flex w-full justify-between items-center justify-center sm:items-center h-20 gap-x-2 px-4 border-b-2 border-b-indigo-500/50">{/*BUTTON-FRAME*/}
+      <header className="flex w-full justify-between items-center justify-center sm:items-center h-20 gap-x-2 px-4 border-b-2 border-b-indigo-500/50">
         <Link className={"px-4 w-1/5 h-8"} href="/">
             <button className={"w-full h-full disabled:bg-slate-500 text-sm rounded-md text-blue bg-blue-400 hover:bg-blue-400 hover:text-white hover:shadow-blue-500 hover:border-indigo-500/50 text-slate-700 active:text-indigo-700 shadow-lg shadow-cyan-500/50 active:shadow-indigo-500"}>
               MAIN</button></ Link>
         <booktitle className="flex"> 
-          POLYGON_MAINNET (multi-media) NFT_BOOK
+          POLYGON_MAINNET - NFT_BOOK
         </booktitle>
         <button className={"text-xs rounded-md text-blue bg-blue-400 px-4 py-2 w-1/5 hover:bg-blue-400 hover:text-white hover:shadow-blue-500 hover:border-indigo-500/50 text-slate-700 active:text-indigo-700 shadow-lg shadow-cyan-500/50 active:shadow-indigo-500"} 
         >PORTFOLIO</button>

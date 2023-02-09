@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 export default function GalleryBook({ nfts, batch, batchKey }) {
   const [index, setIndex] = useState(0);    //pages
-  const [showMore, setShowMore] = useState(false);
+  const [showMore, setShowMore] = useState(true);
   const [batchIDX, setBatch] = useState(1); //batch of 100 pageKey results
 
   function handleLastClick() {
@@ -50,15 +50,26 @@ return (
           rounded-xl self-center w-full my-4" style={{height: '70%', width: 'auto' }} src={nft.media[0].gateway} />
       }
 
-      <datatray className="flex flex-col flex-2-0 border border-blue-400 rounded-lg m-2 p-2 overflow-auto">
+      <datatray className="flex flex-col flex-2-0 border border-blue-400 rounded-lg m-2 p-2 overflow-auto" style={{'width':'95%'}}>
           <h2>
             <i>{nft.title} </i>
-            {/* by {"spazefalcon"} */}
           </h2>
-
-          <button onClick={handleMoreClick}>
-            {showMore ? 'Hide' : 'Show'}
+          {showMore ?  
+          <button onClick={handleMoreClick} 
+          style={{'display':'flex','align-self':'end','margin-top':'-24px','margin-bottom':'10px','margin-right':'5px'}}>
+            <div>&#9660;</div>
+            {/* {showMore ? <div>&#9650;</div> : <div>&#9660;</div>} */}
+            {/* {showMore ? 'Hide' : 'Show'} */}
           </button>
+          : 
+          <button onClick={handleMoreClick} 
+          style={{'display':'flex','align-self':'end','margin-top':'-24px','margin-bottom':'10px','margin-right':'5px'}}>
+            <div>&#9650;</div>
+            {/* {showMore ? <div>&#9650;</div> : <div>&#9660;</div>} */}
+            {/* {showMore ? 'Hide' : 'Show'} */}
+          </button>         
+          }
+
           {showMore && <p>{(nft.description)?nft.description:'no data'}</p>}
 
       </datatray>
