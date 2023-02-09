@@ -9,6 +9,7 @@ import ContactView from '../views/ContactView'
 import DynamicView001 from './001_Project/TitleView'
 import DynamicView002 from './002_Project/TitleView'
 import DynamicView003 from './003_Project/TitleView'
+import SPAZEBOTZView004 from './004_Project_SPAZEBOTZ/TitleView'
 
 const portfolio_app = () => {
   const [viewIDX, setViewIDX] = useState('MainView');
@@ -34,7 +35,9 @@ const portfolio_app = () => {
     }  
   };
 
-  let viewList = [<MainView/>,<DynamicView001/>,<DynamicView002/>,<DynamicView003/>,<AboutView/>,<ContactView/>];  
+  let main = {}; main.next = function(){ loadProject_TitleNext(); }
+  // let viewList = [<MainView main={main}/>,<DynamicView001/>,<DynamicView002/>,<DynamicView003/>,<AboutView/>,<ContactView/>];  
+  let viewList = [<MainView main={main}/>,<SPAZEBOTZView004/>,<DynamicView002/>,<DynamicView003/>,<AboutView/>,<ContactView/>];  
 
   return (
     <div className="flex min-h-screen flex-col bg-black text-slate-600 items-center justify-center">
@@ -52,12 +55,7 @@ const portfolio_app = () => {
               onClick={ ()=>{ setProjectIDX(0); setViewIDX("MainView"); }}>
               SPAZEFALCON PORTFOLIO
             </button>
-          {/* </ Link> */}
-          {/* <button disabled className={"disabled:bg-slate-500 disabled:hover:text-black text-xs rounded-md text-blue bg-blue-400 px-4 py-2 w-1/5 hover:bg-blue-400 hover:text-white hover:shadow-blue-500 hover:border-indigo-500/50 text-slate-700 active:text-indigo-700 shadow-lg shadow-cyan-500/50 active:shadow-indigo-500"} 
-              onClick={ ()=>{ connectWallet() }
-          }>CONNECT WALLET
-          </button> */}
-    
+
       </header> 
       {/* custom html frames - advanced */}
       <viewlistframe className="flex w-full flex-1 flex-col items-center justify-center px-2 md:px-20 text-center">
@@ -66,7 +64,7 @@ const portfolio_app = () => {
           if (viewIDX === "DynamicView") {
             return renderviewList();
           } else if (viewIDX === "MainView") {
-            return <MainView /> ;
+            return <MainView main={main} /> ;
           } else if (viewIDX === "AboutView") {
             return <AboutView /> ;
           } else if (viewIDX === "ContactView") {

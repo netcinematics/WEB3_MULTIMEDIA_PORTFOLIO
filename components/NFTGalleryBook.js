@@ -53,7 +53,7 @@ return (
       <datatray className="flex flex-col flex-2-0 border border-blue-400 rounded-lg m-2 p-2 overflow-auto">
           <h2>
             <i>{nft.title} </i>
-            by {"spazefalcon"}
+            {/* by {"spazefalcon"} */}
           </h2>
 
           <button onClick={handleMoreClick}>
