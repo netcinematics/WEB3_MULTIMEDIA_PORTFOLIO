@@ -15,7 +15,6 @@ return (
     </p>
 
     <div className="mt-6 flex max-w-4xl flex-wrap items-center justify-around sm:w-full">
-    {/* <Link href="/PDF_Portfolio/PDFView"  className="mt-6 w-96 rounded-xl border border-b-2 border-blue-400 hover:border-indigo-500/50 p-6 text-left hover:text-blue-600 focus:text-blue-600 hover:shadow-blue-500 shadow-md"> */}
     <section className="mt-6 w-96 rounded-xl border border-b-2 border-blue-400 hover:border-indigo-500/50 p-6 text-left hover:text-blue-600 focus:text-blue-600 hover:shadow-blue-500 shadow-md"
     onClick={ ()=>{
         main.main.next();
@@ -27,7 +26,6 @@ return (
         &rarr; NEXT &larr;
         </p>
     </section>
-    {/* </Link> */}
     <Link href="/PDF_Resume_JS/PDFView"  className="mt-6 w-96 rounded-xl border border-b-2 border-blue-400 hover:border-indigo-500/50 p-6 text-left hover:text-blue-600 focus:text-blue-600 hover:shadow-blue-500 shadow-md">
         <h3 className="text-2xl font-bold">PDF Resume </h3>
         <p className="mt-4 text-xl">
@@ -40,13 +38,19 @@ return (
         Visual Timeline &rarr;
         </p>
     </Link>
-    <a href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-        className="mt-6 w-96 rounded-xl border border-b-2 border-blue-400 hover:border-indigo-500/50 p-6 text-left hover:text-blue-600 focus:text-blue-600 hover:shadow-blue-500 shadow-md">
+    {/* <a href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app" */}
+        {/* className="mt-6 w-96 rounded-xl border border-b-2 border-blue-400 hover:border-indigo-500/50 p-6 text-left hover:text-blue-600 focus:text-blue-600 hover:shadow-blue-500 shadow-md"> */}
+    <section className="mt-6 w-96 rounded-xl border border-b-2 border-blue-400 hover:border-indigo-500/50 p-6 text-left hover:text-blue-600 focus:text-blue-600 hover:shadow-blue-500 shadow-md"
+    onClick={ ()=>{
+        main.main.contact();
+    }
+    }>
         <h3 className="text-2xl font-bold">Contact </h3>
         <p className="mt-4 text-xl">
          How can I help you? &rarr;
         </p>
-    </a>
+   </section>
+    {/* </a> */}
     </div>
 
     <p className="mt-3 text-2xl">
