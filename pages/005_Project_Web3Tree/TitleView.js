@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image'
 import { useState } from 'react'
-import TitleIMG from './img/spazebotzTitle_1080_SQ_5.jpg'
+import TitleIMG from './img/Web3Tree.jpg'
 
 export default function TitleView() {
 
@@ -21,8 +21,8 @@ return (
         <Image src={TitleIMG} alt="Title Cover" className="rounded-xl shadow-lg hover:shadow-blue-400 shadow-cyan-500 active:shadow-indigo-500" alt="" width={600} height={600} />
         }
     </Link>
-    <p className="mt-6 text-2md">Originz in SpazeBotCity {' '}
-        <code className="rounded-md p-3 font-mono  text-1md">2020-{new Date().getFullYear()} &copy;  
+    <p className="mt-6 text-2md">Web3 Ecosystem Map built in D3.js {' '}
+        <code className="rounded-md p-3 font-mono  text-1md">  
         </code>
 
         <button onClick={handleMoreClick}>

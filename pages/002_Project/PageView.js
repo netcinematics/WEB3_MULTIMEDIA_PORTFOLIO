@@ -21,9 +21,13 @@ export default function BookView() {
       const fetchURL = `${baseURL}?owner=${process.env.NEXT_PUBLIC_OWNER_WALLET}`;
       // const fetchURL = `${baseURL}?owner=${process.env.PROD_OWNER_WALLET}`;
       nfts = await fetch(fetchURL, requestOptions).then(data => data.json())
+      //emulate paging
       if (nfts) {
         setNFTs(nfts.ownedNfts)
       }
+      // if (nfts) {
+      //   setNFTs(nfts.ownedNfts)
+      // }
     }    
 
     const textToCopy = "0xE52A031E3d5b0Dcb086A30e533CF6a71c77f6C27";
@@ -36,7 +40,7 @@ export default function BookView() {
             <button className={"w-full h-full disabled:bg-slate-500 text-sm rounded-md text-blue bg-blue-400 hover:bg-blue-400 hover:text-white hover:shadow-blue-500 hover:border-indigo-500/50 text-slate-700 active:text-indigo-700 shadow-lg shadow-cyan-500/50 active:shadow-indigo-500"}>
               GALLERY</button></ Link>
           <booktitle className="flex"> 
-            ETH_MAINNET_1
+            Wallet : ETH_MAINNET_1
             <div className="ml-2 hover:shadow-indigo-500 hover:shadow-blue-100">{/*icon*/}
               <CC content={textToCopy} />
             </div>

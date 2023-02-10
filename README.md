@@ -22,19 +22,21 @@ DEMO LINK: [https://cryptobookz2.vercel.app/](https://cryptobookz2.vercel.app/)
 
 ## DESCRIPTION / PROBLEM STATEMENT / SOLUTIONS
 
-*Web3folio* dApp display many technical projects in one place. With text to help employers see clearly the amazing skills we gain at Alchemy University!
+*Web3folio* dApp display many technical projects in one place. With text to help employers see clearly the amazing skills we gain at Alchemy University! And SANDBOX for INNOVATIVE UI/UX features and PLATFORM INTEGRATIONS.
 
-> The following list of CREATIVE SOLUTIONS details the LESSONS LEARNED, in each PROJECT. 
+> The following list of CREATIVE SOLUTIONS details the VALUE-ADD in each PROJECT. 
 
 ### CRYPTOBOOKZ
 - dApp displays POLYGON MAINNET NFTs like pages of a book.
-- double navigation, routes, and dynamic views in NEXTJS.
-- looping navigation, pagination (over 100), and copy URL icon.  
-- multi-media NFT GALLERY (audio tokens)
+- API calls to multiple MAINNETs with multiple API calls (collection/wallet, ETH/MATIC)
+- Double NAV, ROUTES, and dynamic VIEWS in NEXTJS.
+- LOOP nav, pagination (over 100), and copy URL icon.  
+- MULTI-MEDIA audio tokens
+- MOBILE RESPONSIVE.
 
 ### SPAZAFALCON - AUDIO NFTs
-- leverages NFTs as a multi-media art medium. Not just images. 
-- a second example of Polygon NFTs loaded from MAINNET.
+- Demonstrates AUDIO/VIDEO display of NFTs as a multi-media art medium. Not just images. 
+- Also, a second example of Polygon NFTs loaded from MAINNET.
 
 ### PDF Resume and PDF Porfolio in NextJS (non-trivial)
 - hide/show DETAILS, with LINKS to INTERACTIVE EXAMPLES.
@@ -42,7 +44,8 @@ DEMO LINK: [https://cryptobookz2.vercel.app/](https://cryptobookz2.vercel.app/)
 -------------
 
 ## NEXT-STEPS
-- Add Video and Audio into the CRYPTOBOOKZ experience.
+- Add Video and Audio, as MULTI-MEDIA CRYPTOBOOKZ experience.
+- Add Token METADATA display: Attributes, Token SYMBOL, contract type, link to blockexplorer or rarible.
 - Add existing projects:
     - Web3_Tree, Web3 Ecosystem project.
     - AR/VR examples.

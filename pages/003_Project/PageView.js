@@ -1,4 +1,4 @@
-import GalleryBook from '../../components/NFTGalleryBook';
+import GalleryAudioBook from '../../components/NFTGalleryAudio';
 import { useState, useEffect } from 'react'
 import Link from 'next/link';
 import dynamic from "next/dynamic"
@@ -14,7 +14,6 @@ export default function BookView() {
       let nftids = {};
       //TODO: add your collection in .env.local: "https://polygon-mainnet.g.alchemy.com/nft/v2/yourKey/getNFTsForCollection?contractAddress=0xYourContractAddr"
       const fetchURL = `${process.env.NEXT_PUBLIC_fetch_spazefalcon}`;
-      // const fetchURL = `${process.env.PROD_fetch_spazefalcon}`;
       var requestOptions = { method: 'GET'};
       nftids = await fetch(fetchURL, requestOptions).then(data => data.json())
       let nftz = []; 
@@ -22,7 +21,6 @@ export default function BookView() {
         let nft;
         //TODO: add your collection ID LOOKUP: "https://polygon-mainnet.g.alchemy.com/nft/v2/yourAPIKey/getNFTMetadata?contractAddress=0xyourContractAddr&tokenId="
         const fetchCard = `${process.env.NEXT_PUBLIC_fetch_spazetunes}${nftids.nfts[i].id.tokenId}`;
-        // const fetchCard = `${process.env.PROD_fetch_spazetunes}${nftids.nfts[i].id.tokenId}`;
         nft = await fetch(fetchCard, requestOptions).then(data => data.json());
         if (nft) { nftz.push(nft); }        
       }
@@ -41,7 +39,7 @@ export default function BookView() {
             <button className={"w-full h-full disabled:bg-slate-500 text-sm rounded-md text-blue bg-blue-400 hover:bg-blue-400 hover:text-white hover:shadow-blue-500 hover:border-indigo-500/50 text-slate-700 active:text-indigo-700 shadow-lg shadow-cyan-500/50 active:shadow-indigo-500"}>
               GALLERY</button></ Link>
             <booktitle className="flex"> 
-              Polygon MAINNET : spazefalcon_collection
+              MAINNET MusicNFTs : collection API
               <div className="ml-2 hover:shadow-indigo-500 hover:shadow-blue-100">{/*icon*/}
                 <CC content={textToCopy} />
               </div>            
@@ -52,7 +50,7 @@ export default function BookView() {
 
         </header> 
         <featureframe className="flex w-full flex-1 flex-col items-center justify-center self-stretch items-stretch px-2 md:px-20 pt-6 pb-12 text-center  overflow-auto">
-          <GalleryBook nfts={NFTs}/>
+          <GalleryAudioBook nfts={NFTs}/>
         </featureframe>
       </div>
     )

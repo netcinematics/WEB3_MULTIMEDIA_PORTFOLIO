@@ -10,6 +10,8 @@ import DynamicView001 from './001_Project/TitleView'
 import DynamicView002 from './002_Project/TitleView'
 import DynamicView003 from './003_Project/TitleView'
 import SPAZEBOTZView004 from './004_Project_SPAZEBOTZ/TitleView'
+import Web3TreeView005 from './005_Project_Web3Tree/TitleView'
+import BIOTOKENZView006 from './006_Project_BIOTOKENZ/TitleView'
 
 const portfolio_app = () => {
   const [viewIDX, setViewIDX] = useState('MainView');
@@ -31,13 +33,16 @@ const portfolio_app = () => {
     } else if (projectIDX===1){ return viewList[1];
     } else if (projectIDX===2){ return viewList[2];
     } else if (projectIDX===3){ return viewList[3];
-    } else { return viewList[4];
+    } else if (projectIDX===4){ return viewList[4];
+    } else if (projectIDX===5){ return viewList[5];
+    } else { return viewList[0];
     }  
   };
-
+ 
   let main = {}; main.next = function(){ loadProject_TitleNext(); }
   // let viewList = [<MainView main={main}/>,<DynamicView001/>,<DynamicView002/>,<DynamicView003/>,<AboutView/>,<ContactView/>];  
-  let viewList = [<MainView main={main}/>,<SPAZEBOTZView004/>,<DynamicView002/>,<DynamicView003/>,<AboutView/>,<ContactView/>];  
+  // let viewList = [<MainView main={main}/>,<SPAZEBOTZView004/>,<DynamicView002/>,<DynamicView003/>,<AboutView/>,<ContactView/>];  
+  let viewList = [<MainView main={main}/>,<SPAZEBOTZView004/>,<DynamicView001/>,<DynamicView003/>,<Web3TreeView005/>,<BIOTOKENZView006/>];  
 
   return (
     <div className="flex min-h-screen flex-col bg-black text-slate-600 items-center justify-center">
@@ -106,7 +111,8 @@ const portfolio_app = () => {
       <style jsx global>{`
       main { 
         border-radius: 13px;
-        background-image: url('img/carbon_fibre1.png');
+        background-image: url('img/carbon_fibre2.png');
+
         
       }
 

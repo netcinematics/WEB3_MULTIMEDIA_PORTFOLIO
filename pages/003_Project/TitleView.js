@@ -5,7 +5,7 @@ import TitleIMG from './img/spazefalcon1.png'
 export default function TitleView() {
 return (
 <main className="flex w-full flex-1 flex-col items-center justify-center text-center">
-    <Link href="/003_Book/BookView">
+    <Link href="/003_Project/PageView">
         <Image src={TitleIMG} alt="Title Cover" className="rounded-xl shadow-lg hover:shadow-blue-400 shadow-cyan-500 active:shadow-indigo-500" alt="" width={600} height={600} />
     </Link>
     <p className="mt-6 text-2md">spazeFalcon shredz EDM~Dance~Music! {' '}

@@ -15,7 +15,6 @@ export default function BookView() {
       let res = {}, nfts=[]; 
      //TODO: add your own .env.local: "https://polygon-mainnet.g.alchemy.com/v2/yourKey/getNFTs/?owner=0xyourWallet"
       const fetchURL = `${process.env.NEXT_PUBLIC_POLYGON_MAIN_NFTS}&pageKey=${pageKey}`;
-      // const fetchURL = `${process.env.PROD_POLYGON_MAIN_NFTS}&pageKey=${pageKey}`;
       var requestOptions = { method: 'GET' };
       res = await fetch(fetchURL, requestOptions).then(data => data.json());
       if (res && res.ownedNfts) { 
@@ -41,7 +40,7 @@ export default function BookView() {
               <button className={"w-full h-full disabled:bg-slate-500 text-sm rounded-md text-blue bg-blue-400 hover:bg-blue-400 hover:text-white hover:shadow-blue-500 hover:border-indigo-500/50 text-slate-700 active:text-indigo-700 shadow-lg shadow-cyan-500/50 active:shadow-indigo-500"}>
                 GALLERY</button></ Link>
           <booktitle className="flex"> 
-            POLYGON_MAINNET_1
+            FullWallet : MAINNET
             <div className="ml-2 hover:shadow-indigo-500 hover:shadow-blue-100">{/*icon*/}
                 <CC content={textToCopy} />
             </div>

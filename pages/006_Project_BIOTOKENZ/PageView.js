@@ -37,7 +37,7 @@ export default function BookView() {
             <button className={"w-full h-full disabled:bg-slate-500 text-sm rounded-md text-blue bg-blue-400 hover:bg-blue-400 hover:text-white hover:shadow-blue-500 hover:border-indigo-500/50 text-slate-700 active:text-indigo-700 shadow-lg shadow-cyan-500/50 active:shadow-indigo-500"}>
               MAIN</button></ Link>
         <booktitle className="flex"> 
-          POLYGON_MAINNET API - NFT_BOOK
+          POLYGON_MAINNET - NFT_BOOK
         </booktitle>
         <button className={"text-xs rounded-md text-blue bg-blue-400 px-4 py-2 w-1/5 hover:bg-blue-400 hover:text-white hover:shadow-blue-500 hover:border-indigo-500/50 text-slate-700 active:text-indigo-700 shadow-lg shadow-cyan-500/50 active:shadow-indigo-500"} 
         >PORTFOLIO</button>

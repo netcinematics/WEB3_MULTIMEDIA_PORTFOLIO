@@ -1,11 +1,12 @@
 import Link from 'next/link';
 import Image from 'next/image'
-import TitleIMG from './img/spazebotzTitle_1080_SQ_5.jpg'
+// import TitleIMG from './img/spazebotzTitle_1080_SQ_5.jpg'
+import TitleIMG from './img/title2.png'
 
 export default function TitleView() {
 return (
 <main className="flex w-full flex-1 flex-col items-center justify-center text-center">
-    <Link href="/001_Book/BookView">
+    <Link href="/001_Project/PageView">
         <Image src={TitleIMG} alt="Title Cover" className="rounded-xl shadow-lg hover:shadow-blue-400 shadow-cyan-500 active:shadow-indigo-500" alt="" width={600} height={600} />
     </Link>
     <p className="mt-6 text-2md">Originz in SpazeBot~City {' '}
@@ -13,7 +14,7 @@ return (
         </code>
     </p>
     {/* <Link href="/001_Project/PageView"> */}
-    <Link href="/004_Project_SPAZEBOTZ/PageView">
+    <Link href="/001_Project/PageView">
         <button className="mt-2 pb-1 pt-1 px-4 rounded-xl border items-center justify-center text-center border-b-2 border-blue-400  hover:shadow-blue-500 hover:border-indigo-500/50 p-1 text-left text-blue-600 hover:text-indigo-600 active:text-slate-700 shadow-lg shadow-blue-500/50 active:shadow-indigo-500">
             ~OPEN~</button></Link>
 </main>
