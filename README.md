@@ -1,4 +1,4 @@
-# Web3folio 
+# Web3 Multi-Media Portfolio 
 
 - a REACT and NextJS PORTFOLIO of Web3 skills.
 This Web3 Gallery was made with React, Next.JS, TailwindCSS, NPM, JSON, HTML5, CSS3, Alchemy, and Web3. Expanded, from the "Road to Web3" curriculum.
@@ -10,7 +10,7 @@ An open-source project for you (and anyone) to use as a TEMPLATE to display many
 
 ## ALCHEMY FINAL-PROJECT PROPOSAL
 
-> *WEB3folio* - a Web3 Project Gallery dApp, Front-End to multiple MAINNETS.
+> *WEB3 Multi-Media Portfolio* - a Web3 Project Gallery dApp, Front-End to multiple MAINNETS.
 
 ### REAL-WORLD USE-CASE
 
@@ -22,7 +22,7 @@ DEMO LINK: [https://cryptobookz2.vercel.app/](https://cryptobookz2.vercel.app/)
 
 ## DESCRIPTION / PROBLEM STATEMENT / SOLUTIONS
 
-*Web3folio* dApp display many technical projects in one place. With text to help employers see clearly the amazing skills we gain at Alchemy University! And SANDBOX for INNOVATIVE UI/UX features and PLATFORM INTEGRATIONS.
+*Web3 Multi-Media Portfolio* dApp display many technical projects in one place. With text to help employers see clearly the amazing skills we gain at Alchemy University! And SANDBOX for INNOVATIVE UI/UX features and PLATFORM INTEGRATIONS.
 
 > The following list of CREATIVE SOLUTIONS details the VALUE-ADD in each PROJECT. 
 

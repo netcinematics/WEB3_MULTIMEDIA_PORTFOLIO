@@ -19,15 +19,10 @@ export default function BookView() {
         };
       //TODO: add your own wallet 0x in .env.local
       const fetchURL = `${baseURL}?owner=${process.env.NEXT_PUBLIC_OWNER_WALLET}`;
-      // const fetchURL = `${baseURL}?owner=${process.env.PROD_OWNER_WALLET}`;
       nfts = await fetch(fetchURL, requestOptions).then(data => data.json())
-      //emulate paging
       if (nfts) {
         setNFTs(nfts.ownedNfts)
       }
-      // if (nfts) {
-      //   setNFTs(nfts.ownedNfts)
-      // }
     }    
 
     const textToCopy = "0xE52A031E3d5b0Dcb086A30e533CF6a71c77f6C27";
