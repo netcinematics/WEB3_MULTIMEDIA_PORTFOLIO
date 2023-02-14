@@ -96,3 +96,5 @@ O - high level overview of skills and talents of spazefalcon.
 
 O - examples of AR Universe and VR movie.
 O - links to short movies (COMOSPAZE)
+
+> npm run dev
