@@ -30,21 +30,23 @@ return (
         </button>
            {showMore && <p style={{margin:'1em 4em'}}>
            
-           CRYPTOBOOKZ - is a design pattern of NFTs, minted on Polygon MainNet, curated as pages in a book.
-
-           Built with NextJS and TailwindCSS from Alchemy Road To Web3 NFT Gallery project.
-           It demonstrates navigation patterns, with added features of: loop around capability, routing, and dynamic views.
-
-           The CODE is MIT, the artwork is &copy; spazefalcon 2020-{new Date().getFullYear()} &copy;
-           CRYPTOBOOKZ, SPAZEBOTZ, COZMOSPAZE, OrbyOrbot, characters,story and art is &trade; All rights reserved.
-           
+            PIRATE_or_NINJA - is an EXPERIMENT to learn the subtle complexities of DIGITAL_IDENTITY_DESIGN.
+            The beauty of Pirate_or_Ninja, is that it is an MVC for self-assigned-identity mechanism. 
+            Where you MINT your own ID... for FREE. As Vitalik himself notes, Soul Bound Tokens are still very early.
+            It is this type of experiment which sheds light on the real-world problems, and what is required to resolve them.
+            While this particular attempt is light-weight, light-hearted and FUN. It does lead to some seriously complex issue very rapidly.
+            That is the purpose of this project is to learn more about SOUL BOUND TOKENS, while exploring variation of DIGITAL_IDENTITY_DESIGN, in this project called DIDz.
            </p>}
 
 
     </p>
-    <Link href="/004_Project_SPAZEBOTZ/PageView">
-        <button className="mt-2 pb-1 pt-1 px-4 rounded-xl border items-center justify-center text-center border-b-2 border-blue-400  hover:shadow-blue-500 hover:border-indigo-500/50 p-1 text-left text-blue-600 hover:text-indigo-600 active:text-slate-700 shadow-lg shadow-blue-500/50 active:shadow-indigo-500">
-            ~OPEN~</button></Link>
+
+    <button className="mt-2 pb-1 pt-1 px-4 rounded-xl border items-center justify-center text-center border-b-2 border-blue-400  hover:shadow-blue-500 hover:border-indigo-500/50 p-1 text-left text-blue-600 hover:text-indigo-600 active:text-slate-700 shadow-lg shadow-blue-500/50 active:shadow-indigo-500">
+        <a href="https://testnets.opensea.io/0xd5A0c036B0693A156042F0D3bFD84174B42cfDC7" target="_blank" rel="noopener noreferrer"
+      className="mt-6 w-96">
+            ~OPEN~
+            </a>
+            </button>
 </main> 
 
 )}

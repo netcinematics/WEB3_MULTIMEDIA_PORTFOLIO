@@ -30,21 +30,28 @@ return (
         </button>
            {showMore && <p style={{margin:'1em 4em'}}>
            
-           CRYPTOBOOKZ - is a design pattern of NFTs, minted on Polygon MainNet, curated as pages in a book.
+           WEB3_TREE - is an Interactive 3D TREE MAP, of the Web3 ECOSYSTEM.
+           The PURPOSE: is to help beginners learn emerging Web3 vocabulary.
+           It is a work in progress and the methodology applied was simple.
+           Many tutorials are reviewed, and when a new word appears, it is written into the readme of the project.
+           Then over time, the vocabulary is added to the data set as an ONTOLOGY and TAXOONOMY.
+           With a small bit of text (possible), for the reader to click on... to get more information.
 
-           Built with NextJS and TailwindCSS from Alchemy Road To Web3 NFT Gallery project.
-           It demonstrates navigation patterns, with added features of: loop around capability, routing, and dynamic views.
 
-           The CODE is MIT, the artwork is &copy; spazefalcon 2020-{new Date().getFullYear()} &copy;
-           CRYPTOBOOKZ, SPAZEBOTZ, COZMOSPAZE, OrbyOrbot, characters,story and art is &trade; All rights reserved.
-           
            </p>}
 
 
     </p>
-    <Link href="/004_Project_SPAZEBOTZ/PageView">
+   
+    {/* <Link href="/004_Project_SPAZEBOTZ/PageView"> */}
         <button className="mt-2 pb-1 pt-1 px-4 rounded-xl border items-center justify-center text-center border-b-2 border-blue-400  hover:shadow-blue-500 hover:border-indigo-500/50 p-1 text-left text-blue-600 hover:text-indigo-600 active:text-slate-700 shadow-lg shadow-blue-500/50 active:shadow-indigo-500">
-            ~OPEN~</button></Link>
+        <a href="https://netcinematics.github.io/WEB3_TREASURE_MAP/" target="_blank" rel="noopener noreferrer"
+      className="mt-6 w-96">
+            ~OPEN~
+            </a>
+            </button>
+            {/* </Link> */}
+
 </main> 
 
 )}
