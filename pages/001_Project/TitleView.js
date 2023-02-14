@@ -9,8 +9,8 @@ return (
     <Link href="/001_Project/PageView">
         <Image src={TitleIMG} alt="Title Cover" className="rounded-xl shadow-lg hover:shadow-blue-400 shadow-cyan-500 active:shadow-indigo-500" alt="" width={600} height={600} />
     </Link>
-    <p className="mt-6 text-2md">Originz in SpazeBot~City {' '}
-        <code className="rounded-md p-3 font-mono  text-1md">1/2020<span> ...more</span> {/* TODO more */}
+    <p className="mt-6 text-2md">Adventure across the COZMOS! {' '}
+        <code className="rounded-md p-3 font-mono  text-1md"><span></span> {/* TODO more */}
         </code>
     </p>
     {/* <Link href="/001_Project/PageView"> */}

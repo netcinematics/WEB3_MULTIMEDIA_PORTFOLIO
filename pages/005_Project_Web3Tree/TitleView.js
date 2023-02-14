@@ -14,13 +14,16 @@ export default function TitleView() {
 return (
     
  <main className="flex w-full flex-1 flex-col items-center justify-center text-center">
-    <Link href="/004_Project_SPAZEBOTZ/PageView" className="flex items-center justify-center text-center">
+    {/* <Link href="/004_Project_SPAZEBOTZ/PageView" className="flex items-center justify-center text-center"> */}
+    <a href="https://netcinematics.github.io/WEB3_TREASURE_MAP/" target="_blank" rel="noopener noreferrer"
+      className="flex items-center justify-center text-center">
         {showMore ?
         <Image src={TitleIMG} alt="Title Cover" className="rounded-xl shadow-lg hover:shadow-blue-400 shadow-cyan-500 active:shadow-indigo-500" alt="" width={600} height={600} style={{width:'70%'}} />
         :
         <Image src={TitleIMG} alt="Title Cover" className="rounded-xl shadow-lg hover:shadow-blue-400 shadow-cyan-500 active:shadow-indigo-500" alt="" width={600} height={600} />
         }
-    </Link>
+    </a>
+    {/* </Link> */}
     <p className="mt-6 text-2md">Web3 Ecosystem Map built in D3.js {' '}
         <code className="rounded-md p-3 font-mono  text-1md">  
         </code>

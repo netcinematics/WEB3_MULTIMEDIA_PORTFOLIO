@@ -9,6 +9,7 @@ import DynamicView003 from './003_Project/TitleView'
 import SPAZEBOTZView004 from './004_Project_SPAZEBOTZ/TitleView'
 import Web3TreeView005 from './005_Project_Web3Tree/TitleView'
 import BIOTOKENZView006 from './006_Project_BIOTOKENZ/TitleView'
+import BOXIGONView007 from './007_Project_BOXIGON/TitleView'
 
 const portfolio_app = () => {
   const [viewIDX, setViewIDX] = useState('MainView');
@@ -31,7 +32,7 @@ const portfolio_app = () => {
  
   let main = {}; main.next = function(){ loadProject_TitleNext(); }
   main.contact = function(){setProjectIDX(0); setViewIDX("ContactView");}
-  let viewList = [<MainView main={main}/>,<SPAZEBOTZView004/>,<DynamicView001/>,<DynamicView003/>,<Web3TreeView005/>,<BIOTOKENZView006/>,<ContactView/>];  
+  let viewList = [<MainView main={main}/>,<SPAZEBOTZView004/>,<DynamicView001/>,<DynamicView003/>,<Web3TreeView005/>,<BIOTOKENZView006/>,<BOXIGONView007/>,<ContactView/>];  
 
   return (
     <div className="flex min-h-screen flex-col bg-black text-slate-600 items-center justify-center">
@@ -86,7 +87,7 @@ const portfolio_app = () => {
       <style jsx global>{`
       main { 
         border-radius: 13px;
-        background-image: url('img/carbon_fibre2.png');
+        background-image: url('img/carbon_fibre3.png');
       }
       header { 
         border-radius: 13px;

@@ -9,7 +9,7 @@ return (
         <Image src={TitleIMG} alt="Title Cover" className="rounded-xl shadow-lg hover:shadow-blue-400 shadow-cyan-500 active:shadow-indigo-500" alt="" width={600} height={600} />
     </Link>
     <p className="mt-6 text-2md">Adventures, across the COZMOZ... {' '}
-        <code className="rounded-md p-3 font-mono  text-1md">1/2020<span> ...more</span> {/* TODO more */}
+        <code className="rounded-md p-3 font-mono  text-1md">1/2020<span></span> {/* TODO more */}
         </code>
     </p>
     <Link href="/002_Project/PageView">
