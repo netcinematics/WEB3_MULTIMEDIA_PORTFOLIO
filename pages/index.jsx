@@ -88,7 +88,7 @@ const portfolio_app = () => {
       main { 
         border-radius: 13px;
         background-image: url('img/carbon_fibre3.png');
-      }
+      } 
       header { 
         border-radius: 13px;
         background: url(img/circle-blues.png) no-repeat center center fixed; 
