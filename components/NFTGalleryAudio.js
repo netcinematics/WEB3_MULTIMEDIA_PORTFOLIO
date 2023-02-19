@@ -4,6 +4,7 @@ export default function GalleryAudioBook({ nfts, batch, batchKey }) {
   const [index, setIndex] = useState(0);    //pages
   const [showMore, setShowMore] = useState(true);
   const [batchIDX, setBatch] = useState(1); //batch of 100 pageKey results
+  const [loadingAudio, setLoadingAudio] = useState(1); //batch of 100 pageKey results
 
   function handleLastClick() {
     if(index<1){ setIndex(nfts.length-1)} //loop around index
@@ -32,28 +33,12 @@ export default function GalleryAudioBook({ nfts, batch, batchKey }) {
     setBatch(IDX);
     if(batch){ batch.next(IDX); }
   }    
-  let loadingAudio = true;
-  // const elem = document.querySelector("audio");
-  // if(elem){
 
-  //   elem.addEventListener('canplay', (event) => {
-  //     loadingAudio = false;
-  //     console.log('canplay');
-  //   });
-
-  
-  //   elem.addEventListener('complete', (event) => {
-  //     loadingAudio = false;
-  //     console.log('complete');
-  //   });
-    
-  // }
   let nft = nfts[index];
 //this works on rarible
 //https://ipfs.io/ipfs/bafybeihiwjkalxowd63ep4iia4nhjwbasqw654yfwpscku5oe47447h77q/animation.mpga
 //this is the broken path at nft.metadata.animation_url
 //ipfs://ipfs/bafybeiba57fsy6ywpfl2ewumydw76yfu3asgv6o5puaeaw4vowwpdnmopq/animation.mpga
-// debugger;
 let audioPath = (nft && nft.metadata)? nft.metadata.animation_url : null;
 if(audioPath){
   audioPath = audioPath.replace('ipfs://','https://');
@@ -74,17 +59,11 @@ return (
         <img className="flex h-8/10 sm:flex-auto w-auto  lg:max-w-2xl  md:max-w-2xl sm:max-w-2xl 
           rounded-xl self-center w-full my-4" style={{height: '70%', width: 'auto' }} src={nft.media[0].gateway} />
         }
-    
 
-      {/* <audio controls src={nft.metadata.animation_url}>
-      </audio> */}
-
-    {/* <audio controls="" src="ipfs://ipfs/bafybeiba57fsy6ywpfl2ewumydw76yfu3asgv6o5puaeaw4vowwpdnmopq/animation.mpga"></audio> */}
-{/* <audio controls="" src="https://ipfs.io/ipfs/bafybeihiwjkalxowd63ep4iia4nhjwbasqw654yfwpscku5oe47447h77q/animation.mpga"></audio> */}
-
-      <audio preload="auto" controls complete={()=>{console.log('complete'); loadingAudio=false;} }
-        onCanPlay={()=>{console.log('canplay1'); loadingAudio=false;} }
-        canplay={()=>{console.log('canplay2'); loadingAudio=false;} }
+      <audio preload="auto" controls 
+        // complete={()=>{console.log('complete'); loadingAudio=false;} }
+        onCanPlay={()=>{console.log('canplay1'); setLoadingAudio(false);} }
+        // canplay={()=>{console.log('canplay2'); loadingAudio=false;} }
        src={ (audioPath)? audioPath :
          'https://ipfs.io/ipfs/bafybeihiwjkalxowd63ep4iia4nhjwbasqw654yfwpscku5oe47447h77q/animation.mpga'}>
       </audio>
