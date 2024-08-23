@@ -5,7 +5,7 @@ export default function MainView(main) {
 return (
     <main id="mainView" className="flex w-full flex-1 flex-col items-center justify-center text-center" style={{'box-shadow':'inset 0px 2px 16px 0px steelblue'}}>
     <section className="text-blue-600" style={{'font-size':'2.5em','font-weight': 'bold','paddingTop':'1em'}}>
-        Welcome!
+        Welcome!!!
     </section>
 
     <p className="mt-3 text-2xl">
