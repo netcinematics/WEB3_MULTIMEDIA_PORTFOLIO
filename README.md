@@ -82,8 +82,6 @@ O - listen to audio NFT collection, minted on Blockchain.
 
 ### WEB3_TREE 
 - Web3 Ecosystem Map made with D3.js
-DEMO LINK: [https://netcinematics.github.io/WEB3_TREASURE_MAP/](https://netcinematics.github.io/WEB3_TREASURE_MAP/)
-
 O - high level overview of skills and talents of spazefalcon.
 
 ### AR/VR/WebGL movie projects (2018-2021)
